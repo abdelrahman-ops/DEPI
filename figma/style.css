@@ -547,7 +547,7 @@ nav .profile a {
     transform: rotate(180deg);
     margin-left: 30px;
 }
-.about .line {
+.line {
     width: 100%;
     max-width: 1250px;
     height: 3px;
