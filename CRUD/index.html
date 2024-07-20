@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sources/style.css">
     <title>CRUD SYSTEM</title>
 </head>
+
 <body>
     <main>
         <h1>CRUD Application</h1>
@@ -13,35 +15,34 @@
             <div class="form-container">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" placeholder="Enter First Name">
-                
-                <label for="last-name">last-name</label>
+
+                <label for="last-name">Last Name</label>
                 <input type="text" id="last-name" placeholder="Enter Last Name">
-                
+
                 <label for="roll-no">Roll No</label>
                 <input type="text" id="roll-no" placeholder="Enter Roll No">
-                
-                <button type="submit" id="submit">Submit</button>
+
+                <button type="submit" id="submit" onclick="add()">Submit</button>
             </div>
         </div>
-        <div class="table">
-            <table>
+        <table>
+            <thead>
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Roll No</th>
                     <th>Actions</th>
                 </tr>
-                <tr>
-                    <td>Dear</td>
-                    <td>Programmer</td>
-                    <td>25</td>
-                    <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </main>
+    <script src="./sources/script.js"></script>
+
+    <footer>
+        <p>Abdelrahman Ataa Copyright &copy; 2024</p>
+    </footer>
 </body>
 </html>

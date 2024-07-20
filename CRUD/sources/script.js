@@ -1,54 +1,45 @@
-document.getElementById('submit').addEventListener('click', function () {
-    // Get the input values
-    const firstName = document.getElementById('first-name').value;
-    const lastName = document.getElementById('last-name').value;
-    const rollNo = document.getElementById('roll-no').value;
+let firstName = document.getElementById("first-name");
+let lastName = document.getElementById("last-name");
+let rollNo = document.getElementById("roll-no");
+let tableBody = document.querySelector("table tbody");
 
-    // Validate the inputs
-    if (!firstName || !lastName || !rollNo) {
-        alert('Please fill in all fields');
-        return;
-    }
+function add() {
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+    let td4 = document.createElement("td");
+    let btnEdit = document.createElement("button");
+    let btnDelete = document.createElement("button");
+    let tr = document.createElement("tr");
 
-    // Create a new table row
-    const tableBody = document.getElementById('table-body');
-    const newRow = document.createElement('tr');
+    td1.innerHTML = firstName.value;
+    tr.appendChild(td1);
+    
+    td2.innerHTML = lastName.value;
+    tr.appendChild(td2);
 
-    newRow.innerHTML = `
-        <td>${firstName}</td>
-        <td>${lastName}</td>
-        <td>${rollNo}</td>
-        <td>
-            <button class="edit" onclick="editRow(this)">Edit</button>
-            <button class="delete" onclick="deleteRow(this)">Delete</button>
-        </td>
-    `;
+    td3.innerHTML = rollNo.value;
+    tr.appendChild(td3);
 
-    // Add the new row to the table
-    tableBody.appendChild(newRow);
+    btnEdit.innerHTML = "Edit";
+    btnEdit.classList.add("edit");
+    btnEdit.onclick = function() {
+        // Functionality to edit the row
+    };
+    td4.appendChild(btnEdit);
 
-    // Clear the input fields
-    document.getElementById('first-name').value = '';
-    document.getElementById('last-name').value = '';
-    document.getElementById('roll-no').value = '';
-});
+    btnDelete.innerHTML = "Delete";
+    btnDelete.classList.add("delete");
+    btnDelete.onclick = function() {
+        tr.remove();
+    };
+    td4.appendChild(btnDelete);
 
-function deleteRow(button) {
-    // Get the row to delete
-    const row = button.parentElement.parentElement;
-    row.remove();
-}
+    tr.appendChild(td4);
+    tableBody.appendChild(tr);
 
-function editRow(button) {
-    // Get the row to edit
-    const row = button.parentElement.parentElement;
-    const cells = row.getElementsByTagName('td');
-
-    // Populate the form with the row's data
-    document.getElementById('first-name').value = cells[0].textContent;
-    document.getElementById('last-name').value = cells[1].textContent;
-    document.getElementById('roll-no').value = cells[2].textContent;
-
-    // Delete the row
-    row.remove();
+    // Clear input fields after adding
+    firstName.value = "";
+    lastName.value = "";
+    rollNo.value = "";
 }
