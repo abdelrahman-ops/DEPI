@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0d15;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar .auth-buttons a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar .auth-buttons .sign-in {
+    border: 1px solid white;
+}
+
+.navbar .auth-buttons .sign-up {
+    background-color: #f76c6c;
+}
+
+.hero {
+    display: flexbox;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff825c;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero .email-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero .email-input input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+}
+
+.hero .email-input button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #f76c6c;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.hero .social-proof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .social-proof img {
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.partners img {
+    margin: 0 20px;
+    filter: brightness(0) invert(1);
+}
+
+.mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}

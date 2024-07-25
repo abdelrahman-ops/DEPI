@@ -1,0 +1,103 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #040C18;
+    color: white;
+    margin-left: 150px;
+}
+
+.navbar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 1169.34px;
+    height: 70px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 566px;
+    margin-top: auto;
+}
+.navbar ul li{
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.navbar .container .logo a{
+    /* margin-top: 45px; */
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 62.56px;
+    height: 16.02px;
+    top: 74.29px;
+    left: 135.66px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 30PX;
+    font-weight: 900;
+
+}
+
+.navbar .auth-buttons a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Manrope;
+font-size: 18px;
+font-weight: 500;
+line-height: 24.59px;
+text-align: left;
+width: 63px;
+height: 25px;
+top: 71px;
+left: 1198.02px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.navbar .auth-buttons .sign-in {
+    /* border: 1px solid white; */
+}
+
+.navbar .auth-buttons .sign-up {
+    background-color: #FF4820;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    
+    width: 1279.32px;
+    height: 701.59px;
+    top: 113px;
+    left: 136px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+.hero .hero-image{
+    width: 20.41px;
+    height: 20.59px;
+}
+
