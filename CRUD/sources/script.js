@@ -14,7 +14,7 @@ function add() {
 
     td1.innerHTML = firstName.value;
     tr.appendChild(td1);
-    
+
     td2.innerHTML = lastName.value;
     tr.appendChild(td2);
 
@@ -23,14 +23,14 @@ function add() {
 
     btnEdit.innerHTML = "Edit";
     btnEdit.classList.add("edit");
-    btnEdit.onclick = function() {
+    btnEdit.onclick = function () {
         // Functionality to edit the row
     };
     td4.appendChild(btnEdit);
 
     btnDelete.innerHTML = "Delete";
     btnDelete.classList.add("delete");
-    btnDelete.onclick = function() {
+    btnDelete.onclick = function () {
         tr.remove();
     };
     td4.appendChild(btnDelete);
