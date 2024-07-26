@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data in Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-table">
+        <th>Name</th>
+    </table>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = ["ahmed mostafa", "maohamed ibarhim", "youmna samir"];
+            const tableBody = document.querySelector('#data-table tbody');
+
+            for(let i =0; i <data.length ; i++)
+            {
+                tableBody.innerHTML += `
+                                        <tr>
+                                            <td>${data[i]}</td>
+                                        </tr>
+                                        `
+            }
+        });
+    </script>
+</body>
+</html>

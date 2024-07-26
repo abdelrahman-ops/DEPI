@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .imgDIV {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .imgDIV img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .imgDIV img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #displayDiv {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #333;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: #555;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background-image 0.3s;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgDIV">
+        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=road-car-vehicle-170811.jpg&fm=jpg" alt="">
+        <img src="https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?cs=srgb&dl=lights-car-vehicle-244206.jpg&fm=jpg" alt="">
+        <img src="https://c.wallhere.com/photos/6f/fe/2014_Ford_Mustang_NFS_Hero_Car_netcarshow_netcar_car_images_car_photo-398822.jpg!d" alt="">
+    </div>
+    <div class="dd" id="displayDiv"></div>
+
+    <script>
+        const images = document.querySelectorAll(".imgDIV img");
+        const imgDIV = document.getElementById("displayDiv");
+
+        for(let i = 0 ; i < images.length; i++) {
+            images[i].addEventListener("mouseenter", (event) => {
+                imgDIV.style.backgroundImage = `url(${event.target.src})`;
+            });
+
+            imgDIV.addEventListener("mouseleave", () => {
+                imgDIV.style.backgroundImage = '';
+            });
+        }
+    </script>
+</body>
+</html>

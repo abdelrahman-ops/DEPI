@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="dataForm">
+        <input type="text" placeholder="Name" id="nameInput" required>
+        <input type="number" placeholder="Age" id="ageInput" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body">
+        </tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById("dataForm");
+        const nameInput = document.getElementById("nameInput");
+        const ageInput = document.getElementById("ageInput");
+        const tableBody = document.getElementById("data-table-body");
+
+        let x = 1; // ID counter
+
+        // Existing data
+        const data = [
+            { name: "ahmed", age: 10 },
+            { name: "mohamed", age: 20 },
+            { name: "ibrahim", age: 30 }
+        ];
+
+        // Function to render the existing data
+        function getExistingData() {
+            data.forEach(person => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${x++}</td>
+                    <td>${person.name}</td>
+                    <td>${person.age}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        getExistingData();
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const name = nameInput.value;
+            const age = ageInput.value;
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${x++}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+            `;
+            tableBody.appendChild(row);
+
+            // Clear the input fields after adding the data
+            nameInput.value = '';
+            ageInput.value = '';
+        });
+    </script>
+</body>
+</html>
