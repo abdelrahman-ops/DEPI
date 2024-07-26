@@ -2,7 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0b0d15;
+    background-color: #040C18;
+    ;
     color: white;
 }
 
@@ -18,51 +19,93 @@ body {
     align-items: center;
     padding: 10px 0;
 }
+/* blur-01 */
+.filter{
+    position: absolute;
+    width: 1013px;
+    height: 1013px;
+    left: -336px;
+    top: -305px;
+    background: #002853;
+    filter: blur(282px);
+    z-index: -1;
+}
+
 
 .navbar a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
 }
+.links a:hover {
+    color: #FF4820;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.logo{
+    font-size: 30px;
+    font-weight:bolder;
+
+}
 .navbar .auth-buttons a {
     margin: 0 10px;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
-.navbar .auth-buttons .sign-in {
+/* .navbar .auth-buttons .sign-in {
     border: 1px solid white;
-}
+} */
 
 .navbar .auth-buttons .sign-up {
-    background-color: #f76c6c;
+    background-color: #FF4820;
+}
+.navbar .auth-buttons .sign-up:hover {
+    background-color: #FF2E00;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .hero {
-    display: flexbox;
-    text-align: center;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    padding: 100px 20px;
+    padding: 70px 20px 0 20px;
+}
+
+.hero .box {
+    max-width: 600px;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #ff825c;
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    /* font-size: 1.2rem;*/
+    margin-bottom: 40px; 
+    width: 440px;
+    /* height: 227px; */
+    gap: 0px;
+    opacity: 0px;
+    color: #81AFDD;
+    /* background-color: rebeccapurple; */
+    line-height: 1.5;
 }
 
 .hero .email-input {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     margin-bottom: 20px;
 }
 
@@ -72,28 +115,62 @@ body {
     border-radius: 5px 0 0 5px;
     outline: none;
     width: 300px;
+    background-color: #052D56;
+    color: #FFFFFF;
 }
 
 .hero .email-input button {
     padding: 15px 20px;
     border: none;
-    background-color: #f76c6c;
-    color: white;
+    background-color: #FF4820;
+    color: #FFFFFF;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
 .hero .social-proof {
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
+    
 }
 
 .hero .social-proof img {
     border-radius: 50%;
-    margin: 0 5px;
+    background-size: cover;
+    background-position: center;
+    width: 36px;
+    height: 36px;
+    border: 3px solid white;
+    margin: 0 -7px;
 }
-
+.img{
+    display: flex;
+    background-color: #13DED2;
+    width: 36px;
+    height: 36px;
+    border: 3px solid white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 1000;
+}
+.hero .social-proof span{
+    margin-left: 20px;
+    width: 581.92px;
+    height: 37.61px;
+    top: 736.28px;
+    left: 333.37px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 37.61px;
+    text-align: left;
+    
+}
 .partners {
     display: flex;
     justify-content: center;
@@ -102,15 +179,29 @@ body {
 }
 
 .partners img {
+    filter: invert(100%);
     margin: 0 20px;
-    filter: brightness(0) invert(1);
+    /* filter: brightness(0) invert(1); */
+    transition: transform 0.3s ease;
+    width: 71.1px;
+    height: 24.15px;
+}
+#slack, #drop, #atl{
+    width: 80px;
+    height: 20px;
+}
+.partners img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 .mask {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mask img {
+    width: 100%;
+    height: auto;
 }
